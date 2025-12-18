@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BPHS Chapter 3 Quiz (Verses 1–48)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div>
+        <h1>BPHS Chapter 3 Quiz</h1>
+        <p class="sub">Verses 1–48 • One question at a time • Mastery learning</p>
+      </div>
+      <div class="pill" id="modePill">Round 1</div>
+    </header>
+
+    <section class="card" id="screenStart">
+      <h2>How it works</h2>
+      <ul>
+        <li>You must answer each question correctly to move on.</li>
+        <li>If you miss a question on the first try, it goes into a retry set.</li>
+        <li>At the end, you’ll repeat only the missed questions until correct.</li>
+      </ul>
+      <div class="row">
+        <button class="btn primary" id="btnStart">Start Quiz</button>
+        <button class="btn" id="btnShuffle" title="Optional: shuffle question order">Shuffle: Off</button>
+      </div>
+      <p class="tiny">Tip: You can publish this on GitHub Pages and share the link.</p>
+    </section>
+
+    <section class="card hidden" id="screenQuiz">
+      <div class="topline">
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="meta">
+          <span id="qCounter">Question 1 / 60</span>
+          <span class="dot">•</span>
+          <span id="verseMeta">Verses: 1</span>
+          <span class="dot">•</span>
+          <span id="typeMeta">Vocabulary</span>
+        </div>
+      </div>
+
+      <h2 class="question" id="qText">Question text</h2>
+
+      <div class="options" id="options"></div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="row space">
+        <button class="btn" id="btnReset">Restart</button>
+        <button class="btn primary" id="btnNext" disabled>Next</button>
+      </div>
+
+      <details class="explain hidden" id="explainBox">
+        <summary>Explanation</summary>
+        <div id="explainText"></div>
+      </details>
+    </section>
+
+    <section class="card hidden" id="screenDone">
+      <h2 id="doneTitle">Done!</h2>
+      <p id="doneText"></p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="statN" id="statTotal">0</div>
+          <div class="statL">Total Questions</div>
+        </div>
+        <div class="stat">
+          <div class="statN" id="statMissed">0</div>
+          <div class="statL">Missed on 1st Try</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn primary" id="btnAgain">Restart</button>
+      </div>
+      <p class="tiny">If you want, you can add a “Share Score” button later.</p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
