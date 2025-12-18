@@ -4,7 +4,7 @@
 // Replace this sample with Claude's JSON array.
 // Must be: [{id, verses:[...], type, question, options:[...], correctIndex, explanation}, ...]
 const QUIZ = [
-[
+
   {
     "id": "Q001",
     "verses": [1],
